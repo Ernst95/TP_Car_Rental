@@ -1,7 +1,7 @@
 package com.tpCarRental.services;
 
 /**
- * Created by Ernst on 2017/09/03.
+ * Created by Ernst on 2017/11/04.
  */
 public interface BaseService <E, ID>{
 

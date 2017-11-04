@@ -1,8 +1,8 @@
 package com.tpCarRental.services.Impl;
 
-import com.tpCarRental.domain.Admin;
-import com.tpCarRental.repositories.AdminRepository;
-import com.tpCarRental.services.AdminService;
+import com.tpCarRental.domain.Address;
+import com.tpCarRental.repositories.AddressRepository;
+import com.tpCarRental.services.AddressService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -11,31 +11,31 @@ import org.springframework.stereotype.Component;
  */
 
 @Component
-public class AdminServiceImpl implements AdminService {
+public class AddressServiceImpl implements AddressService {
 
    @Autowired
-    private AdminRepository repository;
+    private AddressRepository repository;
 
    @Override
-    public Admin save(Admin entity)
+    public Address save(Address entity)
    {
        return repository.save(entity);
    }
 
    @Override
-    public Admin findById(String s)
+    public Address findById(String s)
    {
        return repository.findOne(s);
    }
 
    @Override
-    public Admin update(Admin entity)
+    public Address update(Address entity)
    {
        return repository.save(entity);
    }
 
    @Override
-    public void delete(Admin entity)
+    public void delete(Address entity)
    {
        repository.delete(entity);
    }

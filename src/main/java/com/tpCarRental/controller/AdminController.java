@@ -1,8 +1,11 @@
-package com.tpCarRental;
+package com.tpCarRental.controller;
 
 import com.google.gson.Gson;
+import com.tpCarRental.domain.Address;
 import com.tpCarRental.domain.Admin;
+import com.tpCarRental.factories.AddressFactory;
 import com.tpCarRental.factories.AdminFactory;
+import com.tpCarRental.services.Impl.AddressServiceImpl;
 import com.tpCarRental.services.Impl.AdminServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -11,12 +14,12 @@ import java.util.Date;
 import java.util.List;
 
 /**
- * Created by Ernst on 2017/09/03.
+ * Created by Ernst on 2017/11/04.
  */
 @CrossOrigin(origins = "http://localhost:8080/")
 @RestController
 @RequestMapping(path = "/tpCarRental")
-public class TPCarRentalApp {
+public class AdminController {
 
     @Autowired
     private AdminServiceImpl adminService;

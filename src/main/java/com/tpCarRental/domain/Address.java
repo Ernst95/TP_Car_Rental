@@ -12,7 +12,6 @@ import javax.persistence.Id;
 public class Address {
 
     @Id
-    //@GeneratedValue
     private String id;
     private String houseNumber;
     private String streetName;
@@ -73,12 +72,12 @@ public class Address {
     }
 
     public Address(Builder builder) {
-        this.id = id;
-        this.houseNumber = houseNumber;
-        this.streetName = streetName;
-        this.suburb = suburb;
-        this.postalCode = postalCode;
-        this.city = city;
+        this.id = builder.id;
+        this.houseNumber = builder.houseNumber;
+        this.streetName = builder.streetName;
+        this.suburb = builder.suburb;
+        this.postalCode = builder.postalCode;
+        this.city = builder.city;
     }
 
     public static class Builder{

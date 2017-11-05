@@ -6,6 +6,9 @@ import com.tpCarRental.services.AddressService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Created by Ernst on 2017/11/04.
  */
@@ -39,4 +42,16 @@ public class AddressServiceImpl implements AddressService {
    {
        repository.delete(entity);
    }
+
+    public List<Address> getAddress() {
+
+        List<Address> allAddress = new ArrayList<Address>();
+
+        Iterable<Address> address = repository.findAll();
+        for (Address addr : address) {
+            allAddress.add(addr);
+        }
+        return allAddress;
+    }
+
 }

@@ -70,4 +70,14 @@ public class AddressController {
         List<Address> address = addressService.getAddress();
         return new Gson().toJson(address);
     }
+
+    @GetMapping(path = "getAddressCity/{city}")
+    public @ResponseBody String getAddressCity(@PathVariable String city)
+    {
+        //System.out.println("Mapping address: " + city);
+        List<Address> address = addressService.getAddressCity(city);
+        return new Gson().toJson(address);
+    }
+
+
 }

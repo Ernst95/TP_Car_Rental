@@ -1,18 +1,15 @@
 package com.tpCarRental.factories;
 
-
 import com.tpCarRental.domain.Status;
-import com.tpCarRental.domain.CarType;
 
 public class StatusFactory {
 
-    public static Status buildStatus(String id, String statuc,CarType carType)
+    public static Status buildStatus(String id, String statuses)
     {
         Status status = new Status.Builder()
-                .id(id)
-                .statuc(statuc)
-                .carType(carType)
-                .build();
+            .id(id)
+            .statuses(statuses)
+            .build();
         return status;
     }
 }

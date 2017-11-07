@@ -23,9 +23,9 @@ public class Rental {
 
     }
 
-    //@OneToOne
-    //@JoinColumn(name="idOfCar")
-    //private Car car
+    @OneToOne
+    @JoinColumn(name="idOfCar")
+    private Car car;
 
 
     public String getId() {
@@ -65,6 +65,7 @@ public class Rental {
         this.rentDays=build.rentDays;
         this.customer=build.customer;
         this.status=build.status;
+        this.car=build.car;
 
     }
     public static class Builder
@@ -77,6 +78,7 @@ public class Rental {
         private double paymentAmountDue;
         private int rentDays;
         private Boolean status;
+        private Car car;
 
         public Builder id(String value)
         {
@@ -129,13 +131,13 @@ public class Rental {
 
         }
 
-       /* public Builder car(Car value)
+        public Builder car(Car value)
         {
 
             this.car=value;
             return this;
 
-        }*/
+        }
 
 
         public Rental build()

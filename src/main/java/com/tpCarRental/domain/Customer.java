@@ -16,7 +16,7 @@ public class Customer {
     private boolean licence;
 
     @OneToOne
-    @JoinColumn(name="carsId")
+    @JoinColumn(name="fullId")
     private Address address_id;
     private Contact contact_id;
 

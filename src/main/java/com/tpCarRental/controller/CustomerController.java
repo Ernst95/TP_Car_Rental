@@ -6,6 +6,7 @@ import com.tpCarRental.domain.Address;
 import com.tpCarRental.domain.Contact;
 import com.tpCarRental.domain.Customer;
 import com.tpCarRental.factories.CustomerFactory;
+import com.tpCarRental.services.Impl.CustomerServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

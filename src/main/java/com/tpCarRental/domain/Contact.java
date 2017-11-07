@@ -1,5 +1,6 @@
 package com.tpCarRental.domain;
 
+import javax.persistence.Embeddable;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
@@ -8,6 +9,7 @@ import javax.persistence.Id;
  */
 
 @Entity
+@Embeddable
 public class Contact {
 
     @Id

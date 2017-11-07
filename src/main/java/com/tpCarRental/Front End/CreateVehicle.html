@@ -32,10 +32,17 @@
             <div style="text-align: center;">
                 <form name = "loginForm" method ="POST" action="processRegistration.php">
                     <h2>Vehicle Information</h2>
-                    <p>Manufacturer				</br><input type="text" name="firstName" value = "John" required> </p>
-                    <p>Model        			</br><input type="text" name="lastName" value = "Smith" required> </p>
-                    <p>Year    	      			</br><input type="number" name="idNumber" value= "111111224" required> </p>
-                    <p>Vehicle Class :          </br><input type="number" name="streetNumber" required> </p>
+                    <p>Manufacturer				</br><input type="text" name="manufacturer" required> </p>
+                    <p>Model        			</br><input type="text" name="model"  required> </p>
+                    <p>Year    	      			</br><input type="number" name="year"  required> </p>
+                    <p>Vehicle Class :          </br><select name="vehicleClass">
+                        <option value="Sedan">Sedan</option>
+                        <option value="SUV">SUV</option>
+						<option value="Limo">Limo</option>
+						<option value="Trailer">Trailer</option>
+						<option value="Bus">Bus</option>
+                    </select> </p>
+					
                     <p><input type = "submit" name="submit" value="Submit"> </p>
                 </form>
             </div>

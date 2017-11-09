@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>New Administrator</title>
+    <link rel="stylesheet" href='Master.css' type="text/css">
+    <link href="Menu.css" rel="stylesheet" type="text/css"/>
+    <meta charset = "UTF-8">
+    <style>
+        table, th, td {
+            border: 1px solid black;
+        }
+        table{width:800px;}
+        th{height:20px;}
+        table{align:center;}
+    </style>
+</head>
+<body>
+<table width="100%" border="0">
+    <tr>
+        <td colspan="2" bgcolor="#ffffff">
+            <h1><div style="text-align: center;">Uber Gold</div></h1>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" bgcolor="#b5dcb3">
+            <div style="text-align: center;">Register a New Administrator</div>
+        </td>
+    </tr>
+    <tr valign="top">
+        <td bgcolor="#eee" width="50" >
+            <div style="text-align: center;">
+                <form name = "loginForm" onsubmit = "return validateForm()" method ="POST" action="processRegistration.php">
+                    <h2>Sign-In</h2>
+                    <p>First Name             </br><input type="text" name="firstName" value = "John" required> </p>
+                    <p>Last Name              </br><input type="text" name="lastName" value = "Smith" required> </p>
+                    <p>ID Number    	      </br><input type="number" name="idNumber" value= "111111224" required> </p>
+                    <p>Street Number          </br><input type="number" name="streetNumber" required> </p>
+                    <p>Street Name		      </br><input type="text" name="streetName" required> </p>
+                    <p>Suburb			      </br><input type="text" name="suburb" required> </p>
+                    <p>Postal Code		      </br><input type="number" name="postalCode" required> </p>
+                    <p>City				      </br><input type="text" name="city" required> </p>
+                    <p>Cell Number		      </br><input type="tel" name="cellNumber" required> </p>
+                    <p>Home Number		      </br><input type="tel" name="homeNumber" required> </p>
+                    <p>Email Address	      </br><input type="email" name="emailAddress" required> </p>
+                    <p>Password               </br><input type="password" name="password" required> </p>
+                    <p>Confirm Password       </br><input type="password" name="passwordConfirmation" required> </p>
+                    <p><input type = "submit" name="submit" value="Submit"> </p>
+                </form>
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" bgcolor="#b5dcb3">
+            <div style="text-align: center;">
+                Page Created By Naeem Bux 2017
+            </div>
+        </td>
+    </tr>
+</table>
+</body>
+</html>
+
+<script type = "text/javascript">
+
+    function validateForm() {
+        // var id = document.forms["loginForm"]["id"].value;
+        var name = document.forms["loginForm"]["firstName"].value;
+        var password = document.forms["loginForm"]["password"].value;
+
+        var url = "http://localhost:8080/tpCarRental/addAdmin/" + id + "/" + name + "/" + password;
+        alert(url);
+        var request = new XMLHttpRequest();
+
+
+        request.open("GET", url);
+        request.send();
+    }
+
+</script>
